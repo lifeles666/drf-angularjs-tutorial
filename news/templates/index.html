@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app='restApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Django Rest framework and AngularJS tutorial</title>
+  <meta name="author" content="grzegorz tatara (http://www.grzegorztatara.pl) (http://www.komasoftware.com)">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js"></script>
+
+{% load staticfiles %}
+<script type="text/javascript" src="{% static 'app.js' %}"></script>
+<script type="text/javascript" src="{% static 'controller.js' %}"></script>
+
+</head>
+
+<body>
+<h3>Django Rest framework and AngularJS tutorial</h3>
+<nav>
+	<ul>
+	<li><a href="#{%url 'news-category-list'%}">Category list</a></li>
+	</ul>
+</nav>
+
+<div ng-view></div>
+
+
+</body>
+</html>
